@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    }
+
+body{
+    background-color:#F2F2F0;
+}
+h1{
+    color: #9e6f6d;
+    text-align: center;
+    background-color: #CAC8C9;
+}
+.navbar{
+    background-color: #C6ADAF;
+}
+.nav_link {
+    color: #3D3F3E;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    flex-direction: column;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    margin-top: 5px;
+}
+footer{
+    background-color: #C6ADAF;
+    padding:20px;
+}
+.introduction{
+    font-size: 14px;
+    text-align: center;
+    background-color:#C6ADAF;
+    padding: 50px;
+    margin: 0px;
+    font-size: 20px;
+}
+.mainImage {
+    position: relative;
+    text-align: center;
+
+}
+.creditos{
+    text-align: center;
+    font-size: 10px;
+}
+.redesSociales{
+    text-align: right;
+    font-size: 20px;
+}
+.producto{
+    padding: 15px;
+    margin-left: 20px;
+    display: flex;
+    align-content: space-between;
+}
+
+.producto{
+    padding: 30px;
+    display: flex;
+    align-content: flex-start;  
+}
+.main_contact{
+    background-color: #CAC8C9;
+    padding-top: 30px;
+    opacity: 70%;
+    text-align: center;
+    background-image: url(..//images/Image1.jpg);
+}
+.historia{
+    background-color: #CAC8C9;
+    padding: 30px;
+    text-align: center;
+}
+
+.imagenes_redes{
+    text-align: right;
+}
+.title_productos{
+    text-align: center;
+    color: #9e6f6d;
+}
+.productos_azucareras{
+    background-color:#F2F2F0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30px;
+}
+.productos_jarras{
+    background-color:#F2F2F0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30px;
+}
+.productos_dips{
+    background-color:#F2F2F0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30px;
+}
+.imagenes_section{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.botonProductos{
+background-color:#F2F2F0;
+padding: 30px;
+}
+
+.botonCatalogo{
+color:white;
+font-size: 40px;
+background-color:#CAC8C9;
+border:#9e6f6d;
+position: static;
+}
+.buttons{
+    color:white;
+    font-size: 20px;
+}
+
+.blog{
+    background-color:#F2F2F0;
+    padding: 30px;
+    display: flex;
+    justify-content:space-between;
+    text-align: center;
+}
+.card1{
+    background-color:#9e6f6d;
+    padding: 30px;
+}
+.card2{
+    background-color:#C6ADAF;
+    padding: 30px;
+}
+.card3{
+    background-color:#9e6f6d;
+    padding: 30px;
+}
+.entradaBlog{
+    background-color:#F2F2F0;
+    padding: 60px;
+    text-align: center;
+}
+.preguntasRespuestas{
+    background-color:#F2F2F0;
+    padding: 30px;
+    text-align: center;
+}
+.pregunta1{
+    background-color:#C6ADAF;
+    margin: 30px;
+}
+.pregunta2{
+    background-color:#9e6f6d;
+    margin: 30px;
+}
+.pregunta3{
+    background-color:#C6ADAF;
+    margin: 30px;
+}
+.pregunta4{
+    background-color:#9e6f6d;
+    margin: 30px;
+}
+.equipoDeTrabajo{
+    background-color:#9e6f6d;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.equipoTrabajo{
+    margin: 50px;
+    text-align: center;
+}
+.trabajadores{
+    margin: 30px;
+    background-color: #CAC8C9;
+}
+.terminosCondiciones{
+    margin: 30px;
+    background-color: #CAC8C9;
+}
+.lead{
+    margin: 50px;
+}
+.container{
+    margin: 50px;
+}
+.card-img-top{
+    margin: 10px;
+}
+.container-cards{
+    margin: 50px;
+    padding: 10px;
+}
+.card-text{
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+}
+.card{
+    margin: 0px;
+}
+.navbar{
+    background-color: #9e6f6d;
+}
+.card-text{
+    font-size: medium;
+}
+.btn{
+    margin: 20px;
+}
+button:hover{
+    background:#C6ADAF;
+    color: white;
+}
+
+.card-img-top{
+    transition: transform 1s; 
+}
+.card-img-top:hover {
+    transform: scale(1.1); 
+    background: #C6ADAF;
+}
+.contact-form{
+    padding: 10px;
+}
+.card-title{
+    text-align: center;
+    color: #9e6f6d;
+}
+.card-button{
+    text-align: center;
+}
+.card-button{
+    transition: transform 2s,
+}
+.card-button:hover {
+    transform: scale(1.1); 
+    background: #C6ADAF;
+}
+.p-1{
+text-decoration: none;
+color: #9e6f6d;
+}
+.row{
+padding: 50px;
+}
+.container-fluid{
+    text-decoration: none;
+    color: #9e6f6d;
+    }
