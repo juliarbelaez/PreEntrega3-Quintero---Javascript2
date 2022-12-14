@@ -3,18 +3,13 @@
 body{
   background-color: $light-color;
 }
-.card-text{
-  margin: 10px;
-  text-align: center;
-  padding: 20px;
-  font-size: 100px;
-}
 .card-title{
   color: $dark-color;
+  .lead{
+    @include theme(dark-theme)
+  }
 }
-.lead{
-  @include theme(dark-theme)
-}
+
 .btn{
   margin: 40px;
   color: $secondary-color;
@@ -23,10 +18,11 @@ body{
   margin: 10px;
   color: $dark-color;
   font-size: medium;
+  .card-text{
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    font-size: medium;
+  }
 }
-.card-text{
-  margin: 10px;
-  text-align: center;
-  padding: 10px;
-  font-size: medium;
-}
+
