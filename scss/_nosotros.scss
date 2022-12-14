@@ -17,18 +17,19 @@ padding: 50px;
 }
 .card{
   margin: 0px;
+  .card-img-top{
+    margin: 10px;
+    background-color: #f8f0e7;
+    .card-title{
+      text-align: center;
+      color: #9e6f6d;
+      .card-button{
+        text-align: center;
+      }
+    }
+  }
 }
-.card-img-top{
-  margin: 10px;
-  background-color: #f8f0e7;
-}
-.card-title{
-  text-align: center;
-  color: #9e6f6d;
-}
-.card-button{
-  text-align: center;
-}
+
 .card-button{
   transition: transform 2s,
 }

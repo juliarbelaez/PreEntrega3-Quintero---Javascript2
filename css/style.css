@@ -58,17 +58,14 @@ body {
   padding: 20px;
   background-color: #F2F2F0;
 }
-
-.form-label {
+.contact-form .form-label {
   color: #9e6f6d;
   font-size: 20px;
 }
-
-.card-group {
+.contact-form .form-label .card-group {
   background-color: #C6ADAF;
 }
-
-.lead-contact {
+.contact-form .form-label .card-group .lead-contact {
   background-color: #F2F2F0;
   color: #27242a;
   padding: 4x0px;
@@ -99,18 +96,15 @@ body {
 .card {
   margin: 0px;
 }
-
-.card-img-top {
+.card .card-img-top {
   margin: 10px;
   background-color: #f8f0e7;
 }
-
-.card-title {
+.card .card-img-top .card-title {
   text-align: center;
   color: #9e6f6d;
 }
-
-.card-button {
+.card .card-img-top .card-title .card-button {
   text-align: center;
 }
 
