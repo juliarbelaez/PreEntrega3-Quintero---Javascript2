@@ -1,0 +1,20 @@
+{
+  "name": "preentrega3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass --watch scss/style.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juliarbelaez/PreEntrega2-Quintero.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juliarbelaez/PreEntrega2-Quintero/issues"
+  },
+  "homepage": "https://github.com/juliarbelaez/PreEntrega2-Quintero#readme"
+}

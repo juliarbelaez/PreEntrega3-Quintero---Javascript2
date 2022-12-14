@@ -1,133 +1,163 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Playfair Display', serif;
-    }
-
-body{
-    background-color:#F2F2F0;
-}
-h1{
-    color: #9e6f6d;
-    text-align: center;
-    background-color: #CAC8C9;
-}
-.navbar{
-    background-color: #C6ADAF;
-}
-.nav_link {
-    color: #3D3F3E;
-    text-decoration: none;
-    flex-direction: column;
-}
-ul{
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 10px;
-    margin-top: 5px;
-}
-footer{
-    background-color: #C6ADAF;
-    padding:20px;
-    color: #F2F2F0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Playfair Display", serif;
 }
 
-.buttons{
-    color:white;
-    font-size: 20px;
+nav {
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #C6ADAF;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  margin-right: 2.5rem;
+}
+nav ul li a {
+  color: whitesmoke;
 }
 
-.container{
-    margin: 50px;
-}
-.card-img-top{
-    margin: 10px;
-    background-color: #f8f0e7;
-}
-.container-cards{
-    margin: 50px;
-    padding: 10px;
-}
-.card-text{
-    margin: 10px;
-    text-align: center;
-    padding: 10px;
-}
-.card{
-    margin: 0px;
-}
-.navbar{
-    background-color: #9e6f6d;
-}
-.card-text{
-    font-size: medium;
-}
-.btn{
-    margin: 20px;
-}
-button:hover{
-    background:#C6ADAF;
-    color: white;
+body {
+  background-color: #F2F2F0;
 }
 
-.card-img-top{
-    transition: transform 1s; 
+.card-title {
+  color: #27242a;
 }
-.card-img-top:hover {
-    transform: scale(1.1); 
-    background: #C6ADAF;
+.card-title .lead {
+  background-color: #F2F2F0;
+  color: #27242a;
+  padding: 4x0px;
 }
-.contact-form{
-    padding: 10px;
+
+.btn {
+  margin: 40px;
+  color: #C6ADAF;
 }
-.card-title{
-    text-align: center;
-    color: #9e6f6d;
+
+.container-cards {
+  margin: 10px;
+  color: #27242a;
+  font-size: medium;
 }
-.card-button{
-    text-align: center;
+.container-cards .card-text {
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  font-size: medium;
 }
-.card-button{
-    transition: transform 2s,
+
+.contact-form {
+  padding: 20px;
+  background-color: #F2F2F0;
 }
+
+.form-label {
+  color: #9e6f6d;
+  font-size: 20px;
+}
+
+.card-group {
+  background-color: #C6ADAF;
+}
+
+.lead-contact {
+  background-color: #F2F2F0;
+  color: #27242a;
+  padding: 4x0px;
+}
+
+.container {
+  margin: 50px;
+}
+
+.p-1 {
+  text-decoration: none;
+  color: #9e6f6d;
+}
+
+.row {
+  padding: 50px;
+}
+
+.rounded-circle {
+  transition: 5s;
+}
+
+.rounded-circle:hover {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+
+.card {
+  margin: 0px;
+}
+
+.card-img-top {
+  margin: 10px;
+  background-color: #f8f0e7;
+}
+
+.card-title {
+  text-align: center;
+  color: #9e6f6d;
+}
+
+.card-button {
+  text-align: center;
+}
+
+.card-button {
+  transition: transform 2s;
+}
+
 .card-button:hover {
-    transform: scale(1.1); 
-    background: #C6ADAF;
-}
-.p-1{
-text-decoration: none;
-color: #9e6f6d;
-}
-.row{
-padding: 50px;
-}
-.container-fluid{
-    text-decoration: none;
-    color: #9e6f6d;
-    }
-.card-group{
-    padding: 10px;
-    color: #9e6f6d;
-}
-.rounded-circle{
-    transition: 5s,
-}
-.rounded-circle:hover {
-    -webkit-transform:scale(1.3);
-    transform:scale(1.3);
-}
-.rounded-circle:hover {
-    filter: grayscale(80%);
-}
-.container-footer{
-    background-color:#C6ADAF;
-}
-h6{
-color: #F2F2F0;
+  transform: scale(1.1);
+  background: #9e6f6d;
 }
 
+.card-img-top {
+  transition: transform 1s;
+}
+
+.card-img-top:hover {
+  transform: scale(1.1);
+  background: #C6ADAF;
+}
+
+.parrafo-pregunta {
+  background-color: #C6ADAF;
+  color: #27242a;
+  padding: 40px;
+}
+
+.card-button {
+  text-align: center;
+}
+
+.card-button {
+  transition: transform 2s;
+}
+
+.card-button:hover {
+  transform: scale(1.1);
+  background: #9e6f6d;
+}
+
+.card-img-top {
+  transition: transform 1s;
+}
+
+.card-img-top:hover {
+  transform: scale(1.1);
+  background: #9e6f6d;
+}
+
+/*# sourceMappingURL=style.css.map */
