@@ -1,0 +1,32 @@
+@import "mixins";
+
+body{
+  background-color: $light-color;
+}
+.card-text{
+  margin: 10px;
+  text-align: center;
+  padding: 20px;
+  font-size: 100px;
+}
+.card-title{
+  color: $dark-color;
+}
+.lead{
+  @include theme(dark-theme)
+}
+.btn{
+  margin: 40px;
+  color: $secondary-color;
+}
+.container-cards{
+  margin: 10px;
+  color: $dark-color;
+  font-size: medium;
+}
+.card-text{
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  font-size: medium;
+}

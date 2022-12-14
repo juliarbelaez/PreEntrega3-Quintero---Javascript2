@@ -1,0 +1,12 @@
+@mixin theme($point){
+  @if $point == light-theme {
+    background-color: $secondary-color;
+    color: $dark-color;
+    padding: 40px;
+  }
+  @if $point == dark-theme {
+    background-color: $light-color;
+    color: $dark-color;
+    padding: 4x0px;
+  } 
+}

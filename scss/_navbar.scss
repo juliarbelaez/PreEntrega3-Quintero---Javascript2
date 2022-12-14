@@ -1,0 +1,23 @@
+@import "vars";
+
+nav{
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $secondary-color;
+
+  ul{
+    list-style: none;
+    display: flex;
+
+    li{
+      margin-right: 2.5rem;
+      
+      a{
+        color: whitesmoke;
+      }
+    }
+  }
+}
