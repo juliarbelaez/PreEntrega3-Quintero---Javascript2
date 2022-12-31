@@ -34,7 +34,7 @@ body {
 .card-title .lead {
   background-color: #F2F2F0;
   color: #27242a;
-  padding: 4x0px;
+  padding: 40px;
 }
 
 .btn {
@@ -152,6 +152,9 @@ body {
 .card-img-top:hover {
   transform: scale(1.1);
   background: #9e6f6d;
+}
+h2{
+  color: #9e6f6d;
 }
 
 /*# sourceMappingURL=style.css.map */
