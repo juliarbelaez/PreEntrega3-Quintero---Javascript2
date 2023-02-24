@@ -129,7 +129,7 @@ botonProductos.addEventListener("click", () => {
         JSON.stringify(carritoDeCompras)
       );
       total += Productos[productoElegido].precio;
-      parseInt(total);
+      total = parseInt(total);
       console.log("Total es " + total);
       localStorage.setItem("total", JSON.stringify(total));
       alert(
