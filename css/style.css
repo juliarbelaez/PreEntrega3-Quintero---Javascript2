@@ -11,7 +11,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #C6ADAF;
+  background-color: #c6adaf;
 }
 nav ul {
   list-style: none;
@@ -25,136 +25,92 @@ nav ul li a {
 }
 
 body {
-  background-color: #F2F2F0;
+  background-color: #f2f2f0;
 }
 
 .card-title {
-  color: #27242a;
-}
-.card-title .lead {
-  background-color: #F2F2F0;
-  color: #27242a;
-  padding: 40px;
+  color: #9e6f6d;
+  font-size: large;
 }
 
 .btn {
-  margin: 40px;
-  color: #C6ADAF;
-}
-
-.container-cards {
   margin: 10px;
-  color: #27242a;
-  font-size: medium;
-}
-.container-cards .card-text {
-  margin: 10px;
-  text-align: center;
-  padding: 10px;
-  font-size: medium;
-}
-
-.contact-form {
-  padding: 20px;
-  background-color: #F2F2F0;
-}
-.contact-form .form-label {
-  color: #9e6f6d;
-  font-size: 20px;
-}
-.contact-form .form-label .card-group {
-  background-color: #C6ADAF;
-}
-.contact-form .form-label .card-group .lead-contact {
-  background-color: #F2F2F0;
-  color: #27242a;
-  padding: 4x0px;
 }
 
 .container {
-  margin: 50px;
+  margin: 10px;
+}
+.card {
+  margin: 10px;
 }
 
-.p-1 {
-  text-decoration: none;
+.card-img-top {
+  transition: transform 1s;
+}
+
+.card-img-top:hover {
+  transform: scale(1.1);
+  background: #c6adaf;
+}
+
+.card-button {
+  text-align: center;
+}
+
+.card-button {
+  transition: transform 1s;
+}
+
+.card-img-top:hover {
+  transform: scale(1.1);
+  background: #9e6f6d;
+}
+h2 {
   color: #9e6f6d;
 }
-
-.row {
-  padding: 50px;
+.agregarCarrito {
+  color: black;
+  background-color: #c6adaf;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px;
+  margin: 0 10px 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px 8px 8px 8px;
 }
-
-.rounded-circle {
-  transition: 5s;
-}
-
-.rounded-circle:hover {
-  -webkit-transform: scale(1.3);
-  transform: scale(1.3);
-}
-
-.card {
-  margin: 0px;
-}
-.card .card-img-top {
-  margin: 10px;
+.card-body {
+  margin: 5px;
   background-color: #f8f0e7;
 }
-.card .card-img-top .card-title {
-  text-align: center;
-  color: #9e6f6d;
-}
-.card .card-img-top .card-title .card-button {
-  text-align: center;
-}
-
-.card-button {
-  transition: transform 2s;
-}
-
-.card-button:hover {
-  transform: scale(1.1);
-  background: #9e6f6d;
-}
-
 .card-img-top {
-  transition: transform 1s;
+  background-color: #c6adaf;
 }
-
-.card-img-top:hover {
-  transform: scale(1.1);
-  background: #C6ADAF;
+.eliminarCarrito {
+  color: black;
+  background-color: #c6adaf;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px;
+  margin: 0 10px 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px 8px 8px 8px;
 }
-
-.parrafo-pregunta {
-  background-color: #C6ADAF;
-  color: #27242a;
-  padding: 40px;
+.ecommerce {
+  background-color: #f8f0e7;
 }
-
-.card-button {
-  text-align: center;
+.card-text {
+  padding: 50px;
 }
-
-.card-button {
-  transition: transform 2s;
+p {
+  font-size: small;
 }
-
-.card-button:hover {
-  transform: scale(1.1);
-  background: #9e6f6d;
+#vaciarCarrito {
+  color: black;
+  background-color: #c6adaf;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px;
+  margin: 0 10px 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px 8px 8px 8px;
 }
-
-.card-img-top {
-  transition: transform 1s;
-}
-
-.card-img-top:hover {
-  transform: scale(1.1);
-  background: #9e6f6d;
-}
-h2{
-  color: #9e6f6d;
-}
-
-/*# sourceMappingURL=style.css.map */
