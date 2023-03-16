@@ -37,15 +37,20 @@ body {
   margin: 10px;
 }
 
-.container {
-  margin: 10px;
-}
 .card {
-  margin: 10px;
+  margin: 50px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-img-top {
   transition: transform 1s;
+  background: #c6adaf;
 }
 
 .card-img-top:hover {
@@ -99,7 +104,7 @@ h2 {
   background-color: #f8f0e7;
 }
 .card-text {
-  padding: 50px;
+  padding: 10px;
 }
 p {
   font-size: small;
@@ -113,4 +118,49 @@ p {
   margin: 0 10px 20px 0;
   border: 1px solid #ccc;
   border-radius: 8px 8px 8px 8px;
+}
+.swal {
+  padding: 7px 19px;
+  border-radius: 2px;
+  background-color: white;
+  font-size: 12px;
+  border: 1px solid white;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}
+.boton {
+  background-color: #c6adaf;
+}
+.row {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.parrafoPrincipal {
+  padding: 70px;
+  font-style: italic;
+  font-size: large;
+  justify-content: center;
+}
+.contenedorParrafo {
+  padding: 50px;
+  background-color: #f8f0e7;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  color: #9e6f6d;
+}
+.tituloProductos {
+  padding: 50px;
+  background-image: url(../images/imagen2.jpg);
+}
+.contenedorParrafoProductos {
+  padding: 10px;
+  align-items: center;
+  background-color: #f8f0e7;
+}
+.tituloEquipo {
+  padding: 50px;
+  background-image: url(../images/imagen1.jpg);
 }
