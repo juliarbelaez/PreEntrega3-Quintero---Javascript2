@@ -112,14 +112,14 @@ export const Productos = [
     nombre: "Jarra Moscu Nido",
     precio: 56000,
     imagen: "../images/jarraFlora.jpg",
-    descripcion: "Dimensiones:20cm x 15cm x 12cm",
+    descripcion: "Dimensiones: 23cm x 26cm x 12cm",
   },
   {
     id: 15,
     nombre: "Jarra Moscu Protea",
     precio: 70000,
     imagen: "../images/jarraProtea.jpg",
-    descripcion: "Dimensiones:20cm x 15cm x 12cm",
+    descripcion: "Dimensiones: 23cm x 26cm x 12cm",
   },
 ];
 
@@ -146,7 +146,7 @@ function mostrarProductos() {
     const precioItems = document.createElement("p");
     precioItems.classList.add("card-text");
     precioItems.textContent = `$${info.precio}`;
-    const descripcionItems = document.createElement("p");
+    const descripcionItems = document.createElement("h4");
     descripcionItems.classList.add("card-text");
     descripcionItems.textContent = info.descripcion;
     const botonItems = document.createElement("button");
