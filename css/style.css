@@ -34,11 +34,13 @@ body {
 }
 
 .btn {
-  margin: 10px;
+  margin: 5px;
 }
 
 .card {
-  margin: 50px;
+  margin: 20px;
+  border: none;
+  background-color: #c6adaf;
 }
 
 .container {
@@ -51,6 +53,7 @@ body {
 .card-img-top {
   transition: transform 1s;
   background: #c6adaf;
+  padding: 5px;
 }
 
 .card-img-top:hover {
@@ -84,8 +87,8 @@ h2 {
   border-radius: 8px 8px 8px 8px;
 }
 .card-body {
-  margin: 5px;
-  background-color: #f8f0e7;
+  margin: 0px;
+  padding: 0px;
 }
 .card-img-top {
   background-color: #c6adaf;
@@ -104,10 +107,10 @@ h2 {
   background-color: #f8f0e7;
 }
 .card-text {
-  padding: 10px;
+  padding: 0px;
 }
 p {
-  font-size: small;
+  font-size: large;
 }
 #vaciarCarrito {
   color: black;
@@ -131,7 +134,7 @@ p {
   background-color: #c6adaf;
 }
 .row {
-  padding: 5px;
+  padding: 20px;
   display: flex;
   justify-content: center;
 }
@@ -163,4 +166,14 @@ h1 {
 .tituloEquipo {
   padding: 50px;
   background-image: url(../images/imagen1.jpg);
+}
+.containerNosotros {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+h4 {
+  font-style: italic;
 }

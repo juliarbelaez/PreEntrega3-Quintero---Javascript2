@@ -1,28 +1,4 @@
-const botonNosotros = document.querySelector("#botonNosotros");
-const containerNosotros = document.querySelector("#containerNosotros");
-
-botonNosotros.addEventListener("click", async () => {
-  for (let i = 1; i < 10; i++) {
-    const data = await fetch("https://randomuser.me/api/");
-    const res = await data.json();
-    res.results.forEach((el) => {
-      console.log(el);
-      container.innerHTML += ` 
-    <div id= "card" class="col-sm-3 card">
-    <img src="${el.picture.large}" class="card-img-top" alt="">
-    <div class="card-text">
-    <h2>${el.name.first} ${el.name.last}</h2>
-    <p>Celular: ${el.phone}</p>
-    <p>Email: ${el.email}</p>
-    </div>
-    </div>
-    </div>
-    <br>
-    `;
-    });
-  }
-});
-
+//Librería
 Toastify({
   text: "¡Lo artesanal toma tiempo! Nuestros tiempos de entrega son entre 30 a 45 días hábiles",
   duration: 7000,
@@ -38,205 +14,227 @@ Toastify({
   onClick: function () {}, // Callback after click
 }).showToast();
 
-//constructor producto//
-class Producto {
-  constructor(nombre, peso, precio, imagen, descripcion) {
-    this.nombre = nombre;
-    this.peso = parseInt(peso);
-    this.precio = parseInt(precio);
-    this.imagen = imagen;
-    this.descripcion = descripcion;
-  }
-}
-
-//productos//
-
-const producto1 = new Producto(
-  "Azucarera Río Protea",
-  "350",
-  24000,
-  "../images/azucareraProtea.jpg",
-  "Cuando compramos un productos 100% hecho a mano estamos comprando un artículo que fue pensado, diseñado y ha pasado por horas de prueba para conseguir el producto deseado; estamos comprando productos exclusivos, únicos y quizá irrepetibles, es una pieza en la que cada detalle fue minuciosamente hecho con amor y respeto en el proceso; estás apoyando artesanos que quieren exaltar el arte, su historia y antepasados manteniendo viva la tradicional artesanal."
-);
-const producto2 = new Producto(
-  "Azucarera Río Olivo",
-  "350",
-  24000,
-  "../images/azucareraOlivo.jpg",
-  "Cuando compramos un productos 100% hecho a mano estamos comprando un artículo que fue pensado, diseñado y ha pasado por horas de prueba para conseguir el producto deseado; estamos comprando productos exclusivos, únicos y quizá irrepetibles, es una pieza en la que cada detalle fue minuciosamente hecho con amor y respeto en el proceso; estás apoyando artesanos que quieren exaltar el arte, su historia y antepasados manteniendo viva la tradicional artesanal."
-);
-const producto3 = new Producto(
-  "Azucarera Río Ninfa",
-  "180",
-  24000,
-  "../images/azucareraCarmesi.jpg",
-  "Hola"
-);
-const producto4 = new Producto(
-  "Dip con tapa bruma",
-  "500",
-  15000,
-  "../images/dipBruma.jpg"
-);
-const producto5 = new Producto(
-  "Dip con tapa nido",
-  "650",
-  15000,
-  "../images/dipNido.jpg",
-  "Cuando compramos un productos 100% hecho a mano estamos comprando un artículo que fue pensado, diseñado y ha pasado por horas de prueba para conseguir el producto deseado; estamos comprando productos exclusivos, únicos y quizá irrepetibles, es una pieza en la que cada detalle fue minuciosamente hecho con amor y respeto en el proceso; estás apoyando artesanos que quieren exaltar el arte, su historia y antepasados manteniendo viva la tradicional artesanal."
-);
-const producto6 = new Producto(
-  "Dip con tapa Viboral",
-  "650",
-  15000,
-  "../images/dipViboral.jpg",
-  "Cuando compramos un productos 100% hecho a mano estamos comprando un artículo que fue pensado, diseñado y ha pasado por horas de prueba para conseguir el producto deseado; estamos comprando productos exclusivos, únicos y quizá irrepetibles, es una pieza en la que cada detalle fue minuciosamente hecho con amor y respeto en el proceso; estás apoyando artesanos que quieren exaltar el arte, su historia y antepasados manteniendo viva la tradicional artesanal."
-);
-const producto7 = new Producto(
-  "Jarra Inglaterra Ninfa",
-  "850",
-  70000,
-  "../images/jarraNinfa.jpg",
-  "Cuando compramos un productos 100% hecho a mano estamos comprando un artículo que fue pensado, diseñado y ha pasado por horas de prueba para conseguir el producto deseado; estamos comprando productos exclusivos, únicos y quizá irrepetibles, es una pieza en la que cada detalle fue minuciosamente hecho con amor y respeto en el proceso; estás apoyando artesanos que quieren exaltar el arte, su historia y antepasados manteniendo viva la tradicional artesanal."
-);
-const producto8 = new Producto(
-  "Jarra Moscu Nido",
-  "650",
-  56000,
-  "../images/jarraFlora.jpg",
-  "Cuando compramos un productos 100% hecho a mano estamos comprando un artículo que fue pensado, diseñado y ha pasado por horas de prueba para conseguir el producto deseado; estamos comprando productos exclusivos, únicos y quizá irrepetibles, es una pieza en la que cada detalle fue minuciosamente hecho con amor y respeto en el proceso; estás apoyando artesanos que quieren exaltar el arte, su historia y antepasados manteniendo viva la tradicional artesanal."
-);
-const producto9 = new Producto(
-  "Jarra Moscu Protea",
-  "350",
-  70000,
-  "../images/jarraProtea.jpg",
-  "Cuando compramos un productos 100% hecho a mano estamos comprando un artículo que fue pensado, diseñado y ha pasado por horas de prueba para conseguir el producto deseado; estamos comprando productos exclusivos, únicos y quizá irrepetibles, es una pieza en la que cada detalle fue minuciosamente hecho con amor y respeto en el proceso; estás apoyando artesanos que quieren exaltar el arte, su historia y antepasados manteniendo viva la tradicional artesanal."
-);
-
-//array productos//
-
-const Productos = [
-  producto1,
-  producto2,
-  producto3,
-  producto4,
-  producto5,
-  producto6,
-  producto7,
-  producto8,
-  producto9,
+//Productos//
+export const Productos = [
+  {
+    id: 1,
+    nombre: "Azucarera Río Flora",
+    precio: 25000,
+    imagen: "../images/azucareraFlora.jpg",
+    descripcion: "Dimensiones: 12cm alto x 11cm ancho x 8cm diámetro ",
+  },
+  {
+    id: 2,
+    nombre: "Tetera Oslo Bruma",
+    precio: 56000,
+    imagen: "../images/teteraBruma.jpg",
+    descripcion: "Dimensiones: 23cm diámetro x 15cm alto",
+  },
+  {
+    id: 3,
+    nombre: "Juego de té CN Olivo",
+    precio: 28500,
+    imagen: "../images/juegoDeTeOlivo.jpg",
+    descripcion: "Dimensiones: 7cm x 11cm x 8.5cm ",
+  },
+  {
+    id: 4,
+    nombre: "Jarra España Violeta + tapa",
+    precio: 58500,
+    imagen: "../images/jarraVioleta.jpg",
+    descripcion: "Dimensiones:15cm x 14cm x 10cm",
+  },
+  {
+    id: 5,
+    nombre: "Jarra España Carmesí",
+    precio: 48000,
+    imagen: "../images/jarraCarmesi.jpg",
+    descripcion: "Dimensiones:15cm x 14cm x 10cm",
+  },
+  {
+    id: 6,
+    nombre: "Salero Barichara Azalea",
+    precio: 18000,
+    imagen: "../images/saleroAzalea.jpg",
+    descripcion: "Dimensiones: 7cm alto x 5cm ancho",
+  },
+  {
+    id: 7,
+    nombre: "Azucarera Río Protea",
+    precio: 24000,
+    imagen: "../images/azucareraProtea.jpg",
+    descripcion: "Dimensiones: 12cm alto x 11cm ancho x 8cm diámetro ",
+  },
+  {
+    id: 8,
+    nombre: "Azucarera Río Olivo",
+    precio: 24000,
+    imagen: "../images/azucareraOlivo.jpg",
+    descripcion: "Dimensiones: 12cm alto x 11cm ancho x 8cm diámetro ",
+  },
+  {
+    id: 9,
+    nombre: "Azucarera Río Ninfa",
+    precio: 24000,
+    imagen: "../images/azucareraCarmesi.jpg",
+    descripcion: "Dimensiones: 12cm alto x 11cm ancho x 8cm diámetro ",
+  },
+  {
+    id: 10,
+    nombre: "Dip con tapa bruma",
+    precio: 15000,
+    imagen: "../images/dipBruma.jpg",
+    descripcion: "Dimensiones: 7.5cm x 10cm x 9cm",
+  },
+  {
+    id: 11,
+    nombre: "Dip con tapa nido",
+    precio: 15000,
+    imagen: "../images/dipNido.jpg",
+    descripcion: "Dimensiones: 7.5cm x 10cm x 9cm",
+  },
+  {
+    id: 12,
+    nombre: "Dip con tapa Viboral",
+    precio: 15000,
+    imagen: "../images/dipViboral.jpg",
+    descripcion: "Dimensiones: 7.5cm x 10cm x 9cm",
+  },
+  {
+    id: 13,
+    nombre: "Jarra Inglaterra Ninfa",
+    precio: 70000,
+    imagen: "../images/jarraNinfa.jpg",
+    descripcion: "Dimensiones: 23cm x 26cm x 12cm",
+  },
+  {
+    id: 14,
+    nombre: "Jarra Moscu Nido",
+    precio: 56000,
+    imagen: "../images/jarraFlora.jpg",
+    descripcion: "Dimensiones:20cm x 15cm x 12cm",
+  },
+  {
+    id: 15,
+    nombre: "Jarra Moscu Protea",
+    precio: 70000,
+    imagen: "../images/jarraProtea.jpg",
+    descripcion: "Dimensiones:20cm x 15cm x 12cm",
+  },
 ];
 
 //variables//
+let carrito = [];
+const items = document.querySelector("#items");
+const carritoDeCompras = document.querySelector("#carrito");
+const mostrarTotal = document.querySelector("#total");
+const botonVaciar = document.querySelector("#boton-vaciar");
 
-let total = 0;
+// Funciones
+function mostrarProductos() {
+  Productos.forEach((info) => {
+    const misItems = document.createElement("div");
+    misItems.classList.add("card", "col-sm-3");
+    const cardItems = document.createElement("div");
+    cardItems.classList.add("card-body");
+    const tituloItems = document.createElement("h5");
+    tituloItems.classList.add("card-title");
+    tituloItems.textContent = info.nombre;
+    const imagenItems = document.createElement("img");
+    imagenItems.classList.add("card-img-top");
+    imagenItems.setAttribute("src", info.imagen);
+    const precioItems = document.createElement("p");
+    precioItems.classList.add("card-text");
+    precioItems.textContent = `$${info.precio}`;
+    const descripcionItems = document.createElement("p");
+    descripcionItems.classList.add("card-text");
+    descripcionItems.textContent = info.descripcion;
+    const botonItems = document.createElement("button");
+    botonItems.classList.add("btn", "btn-outline-secondary");
+    botonItems.textContent = "Agregar al carrito";
+    botonItems.setAttribute("marcador", info.id);
+    botonItems.addEventListener("click", agregarProductoAlCarrito);
 
-let opcion;
-
-//local storage//
-
-let carritoDeCompras =
-  JSON.parse(localStorage.getItem("carritoDeCompras")) || [];
-//DOM//
-
-const botonProductos = document.querySelector("#botonProductos");
-const botonCarrito = document.querySelector("#botonCarrito");
-const container = document.querySelector(".container");
-
-//productos carrito//
-
-botonProductos.addEventListener("click", () => {
-  container.innerHTML = "";
-  Productos.forEach((e, index) => {
-    container.innerHTML += ` 
-    <div id= "card" class="col-sm-3 card">
-    <img src="${e.imagen}" class="card-img-top" alt="">
-    <div class="card-text">
-    <h2>${e.nombre}</h2>
-    <p>Precio: $${e.precio}</p>
-    <p>Descripción:${e.descripcion}</p>
-    <div class="card-button">
-    <button class="agregarCarrito" role="button">Agregar al carrito</button> 
-    </div>
-    </div>
-    </div>
-    <br>
-    `;
+    cardItems.appendChild(imagenItems);
+    cardItems.appendChild(tituloItems);
+    cardItems.appendChild(precioItems);
+    cardItems.appendChild(descripcionItems);
+    cardItems.appendChild(botonItems);
+    misItems.appendChild(cardItems);
+    items.appendChild(misItems);
   });
-
-  //agregar al carrito//
-
-  const botonAgregar = document.querySelectorAll(".agregarCarrito");
-
-  botonAgregar.forEach((boton, index) => {
-    boton.addEventListener("click", () => {
-      let productoElegido = index;
-      carritoDeCompras.push(Productos[productoElegido]);
-
-      localStorage.setItem(
-        "carritoDeCompras",
-        JSON.stringify(carritoDeCompras)
-      );
-      total += Productos[productoElegido].precio;
-      total = parseInt(total);
-      console.log("Total es " + total);
-      localStorage.setItem("total", JSON.stringify(total));
-      Swal.fire({
-        text:
-          "El artículo agregado al carrito de compras fue:" +
-          " " +
-          Productos[productoElegido].nombre,
-        icon: "success",
-      });
-      console.log("mensaje");
-    });
-  });
-});
-
-//eliminar del carrito//
-
-botonCarrito.addEventListener("click", () => {
-  container.innerHTML = ``;
-  carritoDeCompras.forEach((e, index) => {
-    container.innerHTML += ` 
-    <div id= "card" class="col-sm-4 card">
-    <img src="${e.imagen}" class="card-img-top" alt="azucarera">
-    <div class="card-body">
-    <h2>${e.nombre}</h2>
-    <p>Precio: $${e.precio}</p>
-    <p>Descripción:${e.descripcion}</p>
-    <div class="card-button">
-    <button class="eliminarCarrito" role="button">Eliminar del carrito</button> 
-    </div>
-    </div>
-    </div>
-    `;
-  });
-});
-
-/*const botonEliminar = document.querySelectorAll(".eliminarCarrito");
-botonEliminar.addEventListener("onload", () => {
-  console.log("holi");
-});*/
-
-//total resultado//
-
-const botontotal = document.querySelector("#container2");
-
-botonCarrito.addEventListener("click", () => {
-  container2.innerHTML = ``;
-  total = JSON.parse(localStorage.getItem("total")) || [];
-  container2.innerHTML += `<h2>Total: ${total}</h2>`;
-});
-/*
-let vaciarCarrito = document.getElementById("vaciarCarrito");
-vaciarCarrito.addEventListener("click", respuestaClick);
-function respuestaClick() {
-  carritoDeCompras = [];
-  container.innerHTML = ``;
-  container2.innerHTML = ``;
-  total = 0;
-  localStorage.clear();
 }
-*/
+
+//Agregar al carrito//
+
+function agregarProductoAlCarrito(evento) {
+  carrito.push(evento.target.getAttribute("marcador"));
+  renderizarCarrito();
+  console.log(carrito);
+}
+
+//Push al carrito//
+
+function renderizarCarrito() {
+  carritoDeCompras.textContent = "";
+  const carritoSinDuplicados = [...new Set(carrito)];
+  carritoSinDuplicados.forEach((item) => {
+    const miItem = Productos.filter((itemProductos) => {
+      return itemProductos.id === parseInt(item);
+    });
+    const numeroUnidadesItem = carrito.reduce((total, itemId) => {
+      return itemId === item ? (total += 1) : total;
+    }, 0);
+    const misItems = document.createElement("li");
+    misItems.classList.add("list-group-item", "text-right", "mx-12");
+    misItems.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}`;
+    // Botón eliminar//
+    const miBoton = document.createElement("button");
+    miBoton.classList.add("btn", "btn-outline-secondary", "mx-2");
+    miBoton.textContent = "Eliminar";
+    miBoton.style.marginLeft = "1rem";
+    miBoton.dataset.item = item;
+    miBoton.addEventListener(
+      "click",
+      borrarItemCarrito,
+      Swal.fire("¡Súper!", "Tu producto fue agregado al carrito")
+    );
+    misItems.appendChild(miBoton);
+    carritoDeCompras.appendChild(misItems);
+  });
+  //Calcular total
+  mostrarTotal.textContent = calcularTotal();
+}
+
+//Eliminar del carrito
+function borrarItemCarrito(evento) {
+  const id = evento.target.dataset.item;
+  carrito = carrito.filter((carritoId) => {
+    return carritoId !== id;
+  });
+  renderizarCarrito();
+}
+
+//Calcular total
+
+function calcularTotal() {
+  return carrito
+    .reduce((total, item) => {
+      const miItem = Productos.filter((itemProductos) => {
+        return itemProductos.id === parseInt(item);
+      });
+      return total + miItem[0].precio;
+    }, 0)
+    .toFixed(2);
+}
+
+function vaciarCarrito() {
+  carrito = [];
+  renderizarCarrito();
+  Swal.fire("Oh no!", "Tu productos fueron eliminados del carrito");
+}
+
+botonVaciar.addEventListener("click", vaciarCarrito);
+
+mostrarProductos();
+renderizarCarrito();
