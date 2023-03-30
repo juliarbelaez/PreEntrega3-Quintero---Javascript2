@@ -129,6 +129,8 @@ const items = document.querySelector("#items");
 const carritoDeCompras = document.querySelector("#carrito");
 const mostrarTotal = document.querySelector("#total");
 const botonVaciar = document.querySelector("#boton-vaciar");
+const botonFinalizarCompra = document.querySelector("#boton-finalizar-compra");
+const miLocalStorage = window.localStorage;
 
 // Funciones
 function mostrarProductos() {
@@ -169,7 +171,9 @@ function mostrarProductos() {
 
 function agregarProductoAlCarrito(evento) {
   carrito.push(evento.target.getAttribute("marcador"));
+  Swal.fire("¡Súper!", "Tu producto fue agregado al carrito");
   renderizarCarrito();
+  guardarCarritoEnLocalStorage();
   console.log(carrito);
 }
 
@@ -194,11 +198,7 @@ function renderizarCarrito() {
     miBoton.textContent = "Eliminar";
     miBoton.style.marginLeft = "1rem";
     miBoton.dataset.item = item;
-    miBoton.addEventListener(
-      "click",
-      borrarItemCarrito,
-      Swal.fire("¡Súper!", "Tu producto fue agregado al carrito")
-    );
+    miBoton.addEventListener("click", borrarItemCarrito);
     misItems.appendChild(miBoton);
     carritoDeCompras.appendChild(misItems);
   });
@@ -213,6 +213,7 @@ function borrarItemCarrito(evento) {
     return carritoId !== id;
   });
   renderizarCarrito();
+  guardarCarritoEnLocalStorage();
 }
 
 //Calcular total
@@ -231,10 +232,36 @@ function calcularTotal() {
 function vaciarCarrito() {
   carrito = [];
   renderizarCarrito();
+  localStorage.clear();
   Swal.fire("Oh no!", "Tu productos fueron eliminados del carrito");
 }
 
-botonVaciar.addEventListener("click", vaciarCarrito);
+function finalizarCompra() {
+  carrito = [];
+  renderizarCarrito();
+  localStorage.clear();
+  Swal.fire(
+    "¡Compra exitosa!",
+    "Tu compra y pago fueron exitosos, para más información comunicate al (+57) 3116570439",
+    "success"
+  );
+}
 
+function guardarCarritoEnLocalStorage() {
+  miLocalStorage.setItem("carrito", JSON.stringify(carrito));
+}
+
+function cargarCarritoDeLocalStorage() {
+  // ¿Existe un carrito previo guardado en LocalStorage?
+  if (miLocalStorage.getItem("carrito") !== null) {
+    // Carga la información
+    carrito = JSON.parse(miLocalStorage.getItem("carrito"));
+  }
+}
+
+botonVaciar.addEventListener("click", vaciarCarrito);
+botonFinalizarCompra.addEventListener("click", finalizarCompra);
+
+cargarCarritoDeLocalStorage();
 mostrarProductos();
 renderizarCarrito();

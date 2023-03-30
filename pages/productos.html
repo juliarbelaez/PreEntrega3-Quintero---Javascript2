@@ -38,11 +38,6 @@
             <ul>
                 <li class="boton"><a href="productos.html" class="btn btn-outline-secondary" role="button" aria-pressed="true">Productos</a>
                   <li class="boton"><a href="contacto.html" class="btn btn-outline-secondary" role="button" aria-pressed="true">Nosotros</a>
-                  <img src="../images/carritoDeCompras.png" alt="Imagen Carrito de Compras" id="botonCarrito" width="30" height="30">
-                </a>
-                <a class="navbar-brand" href="index.html">
-                <img src="../images/logIn.png" alt="Imagen Login" width="30" height="30">
-              </a>
             </ul>
         </nav>
         </header>
@@ -57,9 +52,9 @@
           <div class="container">
             <div class="row">
                 <!-- Contenedor de productos -->
-                <main id="items" class="col-sm-12 row"></main>
+                <main id="items" class="col-sm-10 row"></main>
                 <!-- Carrito de compras -->
-                <div class="col-sm-0">
+                <div class="col-sm-2">
                     <h2>Tus productos</h2>
                     <!-- Lista de productos -->
                     <ul id="carrito" class="list-group"></ul>
@@ -67,6 +62,7 @@
                     <!-- Total -->
                     <p class="text-right">Total: <span id="total"></span>$</p>
                     <button id="boton-vaciar" class="btn btn-outline-secondary">Vaciar</button>
+                    <button id="boton-finalizar-compra" class="btn btn-success">Realizar pedido</button>
                 </div>
             </div>
         </div>
